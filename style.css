@@ -1,0 +1,168 @@
+:root {
+    --bg: #2f2f2f;
+    --text: #ffffff;
+    --btn: #f8c8dc;
+    --btn-hover: #f4b6d4;
+    --equal: #ff9aa2;
+    --equal-hover: #ff7f89;
+}
+
+body.light-mode {
+    --bg: #f0f0f0;
+    --text: #000;
+    --btn: #ffe0e9;
+    --btn-hover: #ffc8d6;
+    --equal: #f88;
+    --equal-hover: #e66;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    color: var(--text);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.calculator {
+    background-color: var(--bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    position: relative;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    background-color: #fff;
+    color: #000;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: var(--btn);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.equal {
+    grid-column: span 2;
+    background-color: var(--equal);
+    font-weight: bold;
+}
+
+.equal:hover {
+    background-color: var(--equal-hover);
+}
+
+.scientific-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.scientific-buttons button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #b5d5ff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.scientific-buttons button:hover {
+    background-color: #91c4ff;
+}
+
+.utility-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.utility-buttons button {
+    font-size: 14px;
+    padding: 10px;
+    width: 48%;
+    background-color: #ccc;
+    color: #000;
+    font-weight: bold;
+}
+
+.footer-inner {
+    font-size: 15px;
+    color: var(--text);
+    text-align: right;
+    margin-top: 10px;
+}
+
+.footer-global {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 15px;
+    color: #555;
+    opacity: 0.8;
+}
+
+.history {
+    margin-top: 15px;
+    font-size: 14px;
+    max-height: 100px;
+    overflow-y: auto;
+    background: #ffffff10;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.sound-toggle button {
+    font-size: 14px;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sound-toggle button:hover {
+    background-color: #45a049;
+}
